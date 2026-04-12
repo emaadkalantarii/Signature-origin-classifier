@@ -1,0 +1,42 @@
+# Virtual environments
+venv*/
+.venv*/
+env/
+signature_env/
+venv-sign/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Model checkpoints & large data files
+model.pth
+*.pth
+*.pt
+*.ckpt
+
+# Dataset (keep structure, ignore data files)
+signatures/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs & outputs
+*.log
+runs/
+outputs/
