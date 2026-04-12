@@ -181,9 +181,12 @@ class SignatureModel(nn.Module):
 def get_device() -> torch.device:
     """Return a CUDA device if available, otherwise CPU."""
     if torch.cuda.is_available():
-        print("CUDA GPU detected — using GPU for training.")
-        return torch.device("cuda")
-    print("No GPU found — using CPU.")
+        device = torch.device("cuda")
+        gpu_name = torch.cuda.get_device_name(0)
+        gpu_mem = torch.cuda.get_device_properties(0).total_memory / (1024 ** 3)
+        print(f"CUDA GPU detected: {gpu_name} ({gpu_mem:.1f} GB) — using GPU.")
+        return device
+    print("No CUDA GPU found — using CPU.")
     return torch.device("cpu")
 
 
