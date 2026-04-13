@@ -21,9 +21,6 @@ model.pth
 *.pt
 *.ckpt
 
-# Dataset (keep structure, ignore data files)
-signatures/
-
 # Jupyter notebooks checkpoints
 .ipynb_checkpoints/
 
