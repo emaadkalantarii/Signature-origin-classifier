@@ -164,4 +164,12 @@ The value of 150 was selected as the best trade-off between accuracy and trainin
 
 ## Results
 
-The final model achieves approximately **~80–82% accuracy** on a held-out test set (15% of the full dataset), using `MAX_SEQ_LENGTH = 150`. Performance varies slightly depending on the random seed and dataset composition.
+| Metric | Value |
+|--------|-------|
+| Test Set Loss | 0.3348 |
+| Test Set Accuracy | 80.21% |
+| Full Dataset Accuracy (`eval.py`) | 85.70% |
+| Best Validation Loss | 0.3291 (Epoch 57) |
+| Best Validation Accuracy | 82.24% |
+
+Training ran for all 60 epochs on an NVIDIA RTX 4060 Laptop GPU (8 GB VRAM). The learning rate was automatically reduced from 0.001 to 0.0005 at epoch 52 via the ReduceLROnPlateau scheduler, after which the model continued to improve and reached its best checkpoint at epoch 57.
