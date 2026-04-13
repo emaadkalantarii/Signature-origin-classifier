@@ -181,9 +181,9 @@ The evaluation module exposes a clean API for integration:
 ```python
 from eval import load_and_predict
 
-predictions = load_and_predict("/path/to/signatures", "model.pth")
-# Returns: { '/abs/path/to/human/001g01.csv': 0,
-#             '/abs/path/to/gan/001g02.csv':   1, ... }
+predictions = load_and_predict("./signatures", "model.pth")
+# Returns: { './signatures/human/001g01.csv': 0,
+#             './signatures/gan/001g02.csv':   1, ... }
 ```
 
 Label encoding: `human → 0`, `gan → 1`, `sdt → 2`, `vae → 3`
