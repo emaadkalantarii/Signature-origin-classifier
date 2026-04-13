@@ -138,7 +138,7 @@ def load_and_predict(directory: str, model_file: str) -> dict:
     Run inference on all CSV files found in a directory tree.
 
     The directory is expected to follow the same structure as the training dataset:
-        /path/to/signatures/
+        ./signatures/
             human/  001g01.csv  001g02.csv  ...
             gan/    001g01.csv  001g02.csv  ...
             sdt/    001g01.csv  001g02.csv  ...
@@ -150,8 +150,8 @@ def load_and_predict(directory: str, model_file: str) -> dict:
 
     Returns:
         A dict mapping absolute CSV file paths to predicted integer labels:
-            { '/abs/path/to/human/001g01.csv': 0,
-              '/abs/path/to/gan/001g01.csv':   1, ... }
+            { './signatures/human/001g01.csv': 0,
+              './signatures/gan/001g01.csv':   1, ... }
 
         Label encoding: human → 0, gan → 1, sdt → 2, vae → 3
     """
